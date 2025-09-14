@@ -1,23 +1,147 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>57 Delafield Street — RU Properties Delafield</title>
-<link rel="stylesheet" href="style.css"></head><body>
-<nav><div class="container"><div class="brand">57 Delafield Street</div>
-<div class="navlinks">
-<a href="index.html" class="">Home</a>
-<a href="gallery.html" class="">Gallery</a>
-<a href="info.html" class="">Information</a>
-<a href="contact.html" class="active">Contact</a>
-</div></div></nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thank You</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="brand">57 Delafield Street</div>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="info.html">Information</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-<div class="container">
-  <h1 class="h1">Contact</h1>
-  <div class="section">
-    <div class="h2">RU Properties Delafield</div>
-    <p>Raj Chawla<br>
-       📞 <a href="tel:+16095929284">609-592-9284</a><br>
-       ✉️ <a href="mailto:chawlamgmt@gmail.com">chawlamgmt@gmail.com</a></p>
+  <div class="container">
+    <h1 class="h1">Thank You!</h1>
+    <p>Your message has been sent successfully. I’ll get back to you shortly.</p>
+    <a href="index.html" class="cta">Return to Home</a>
   </div>
-</div>
-<footer>© RU Properties Delafield • 57 Delafield St, New Brunswick, NJ</footer>
-<script src="script.js"></script></body></html>
+
+  <footer>
+    © RU Properties Delafield · 57 Delafield St, New Brunswick, NJ
+  </footer>
+</body>
+</html>
+Update your contact.html form
+Change the form code slightly to include a redirect:
+
+html
+Copy code
+<form action="https://formspree.io/f/mrbadwbn" method="POST">
+  ...
+  <input type="hidden" name="_next" value="https://urbansherphl.github.io/57-Delafield-Site/thanks.html">
+  <button type="submit" class="cta">Send Message</button>
+</form>
+📌 Replace https://formspree.io/f/abc123xy with your real Formspree endpoint, but leave the quotes in place.
+
+🚀 After this:
+
+User fills out the form.
+
+Formspree sends you the email.
+
+Visitor is redirected to your thank-you page on GitHub Pages.
+
+Do you want me to generate the full updated contact.html (with the redirect already wired in), so you just paste your endpoint in once?
+
+
+
+
+
+
+You said:
+yea
+
+
+ChatGPT said:
+Perfect 👍 Here’s your ready-to-use contact.html with the Formspree form and redirect to a thank-you page.
+
+👉 All you’ll need to do is paste your real Formspree endpoint in place of https://formspree.io/f/abc123xy (keep the quotes).
+
+Updated contact.html
+html
+Copy code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>57 Delafield Street – RU Properties Delafield</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="brand">57 Delafield Street</div>
+      <div class="navlinks">
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="info.html">Information</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="h1">Contact</h1>
+
+    <div class="section">
+      <div class="h2">Get in Touch</div>
+
+      <form action="https://formspree.io/f/abc123xy" method="POST">
+        <label>
+          Full Name<br>
+          <input type="text" name="name" required>
+        </label>
+        <br><br>
+
+        <label>
+          Email Address<br>
+          <input type="email" name="email" required>
+        </label>
+        <br><br>
+
+        <label>
+          Phone (optional)<br>
+          <input type="tel" name="phone">
+        </label>
+        <br><br>
+
+        <label>
+          Message<br>
+          <textarea name="message" rows="5" required></textarea>
+        </label>
+        <br><br>
+
+        <!-- Subject line in Gmail -->
+        <input type="hidden" name="_subject" value="57 Delafield — New Inquiry">
+
+        <!-- Redirect to thank-you page -->
+        <input type="hidden" name="_next" value="https://urbansherphl.github.io/57-Delafield-Site/thanks.html">
+
+        <button type="submit" class="cta">Send Message</button>
+      </form>
+
+      <p class="small" style="margin-top:10px;">
+        Or reach out directly:<br>
+        Email: <a href="mailto:chawlamgmt@gmail.com">chawlamgmt@gmail.com</a><br>
+        Phone: <a href="tel:+16095929284">609-592-9284</a>
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    © RU Properties Delafield · 57 Delafield St, New Brunswick, NJ
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
